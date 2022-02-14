@@ -6,12 +6,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etch A Sketch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="eas-script.js" defer></script>
 </head>
 
 <body>
-  
+  <header>
+    <h1 class="heading">Etch A Sketch</h1>
+  </header>
+
+  <main class="main-container">
+    <div class="controls">
+      <h2>Controls</h2>
+      <div class="paint-buttons">
+        <button class="btn-p btn-bw active-btn">B&W Mode</button>
+        <button class="btn-p btn-rainbow">Rainbow Mode</button>
+        <button class="btn-p btn-shader">Shader</button>
+        <button class="btn-p btn-eraser">Eraser</button>
+      </div>
+      <button class="btn-clear">Clear Board</button>
+      <div class="slide-container">
+        <p>Board Size: <span class="slider-output">16 x 16</span></p>
+        <input type="range" min="16" max="64" value="16" class="slider" id="gridRange">
+      </div>
+    </div>
+
+    <div class="game-grid"></div>
+  </main>
+
+  <footer>
+    <p>Created By Orel Barzilay</p>
+    <a href="https://github.com/Orelba/etch-a-sketch" target="_blank"><img src="images/GitHub-Mark-Light-32px.png" alt="Github Icon"></a>
+  </footer>
 </body>
 
 </html>

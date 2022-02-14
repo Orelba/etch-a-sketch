@@ -1,0 +1,183 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', 'Sora', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(163deg, rgba(251,202,77,1) 29%, rgba(255,137,105,1) 100%);
+  background-color: #f8dd74;
+}
+
+/* Logo */
+header h1 {
+  font-family: 'Sora', 'Montserrat', sans-serif;
+  font-size: 80px;
+  font-weight: 800;
+  color: #d342c5;
+  margin: 60px 0 0;
+}
+
+/* Game Container */
+.main-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: space-evenly;
+  width: 720px;
+  padding: 5px;
+  border-radius: 10px;
+  padding: 30px 5px;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls h2 {
+  font-family: 'Sora', 'Montserrat', sans-serif;
+  font-weight: 18px;
+  margin-bottom: 20px;
+}
+
+/* Controls: Buttons */
+.paint-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.active-btn {
+  border-color: #fbca4d;
+}
+
+button {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  background: none;
+  color: white;
+  height: 34px;
+  width: 165px;
+  border: 2px solid white;
+  border-radius: 16px;
+  transition: .07s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.btn-clear {
+  margin-top: auto;
+  width: 130px;
+}
+
+.btn-clear:hover {
+  color: crimson;
+  border-color: crimson;
+}
+
+/* Controls: Slider */
+.slide-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.slider {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 15px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 16px;
+  background: #fbca4d;
+  cursor: pointer;
+}
+
+
+.slider::-moz-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 16px;
+  background: #fbca4d;
+  cursor: pointer;
+}
+
+/* Grid */
+.game-grid {
+  display: grid;
+  height: 500px;
+  width: 500px;
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+.grid-cell {
+  background-color: white;
+  border-top: 1px solid rgba(90, 44, 216, 0.11);
+  border-right: 1px solid rgba(90, 44, 216, 0.11);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.paint-black {
+  background-color: black;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  margin: auto 10px 10px;
+  gap: 8px;
+}
+
+footer p {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+footer a img {
+  height: 18px;
+  transition: .5s;
+  vertical-align: middle;
+}
+
+footer a img:hover {
+  transform: rotate(1turn) scale(1.2);
+}
