@@ -62,15 +62,11 @@ function paintCell(cell, color, currentBrightness, type = null) {
     } else {
       cell.classList.add('painted')
     }
-  } else {
-    if (currentBrightness > 0 && cell.classList.contains('painted')) {
+  } else if (currentBrightness > 0 && cell.classList.contains('painted')) {
       currentBrightness -= 10
       cell.style.filter = `brightness(${currentBrightness}%)`
-    }
   }
-
 }
-
 
 function paintGrid(color) {
   const elGridCells = document.querySelectorAll('.grid-cell')
@@ -97,9 +93,10 @@ function shadeGrid() {
   elGridCells.forEach((cell) => {
     let currentBrightness = 100
     cell.onmouseover = () => {
-      if (isMouseDown) {
+      if (isMouseDown  && cell.style.backgroundColor) {
         currentBrightness -= 10
         paintCell(cell, 'white', currentBrightness, 'shader')
+        console.log(cell.style.backgroundColor);
       }
       cell.onmousedown = () => { }
     }
@@ -115,7 +112,6 @@ function setChosenButtonStyle(element) {
 
 function game() {
   // Initialize Grid And Choose Color
-
   createGrid(16)
   paintGrid(currentGameMode)
 
